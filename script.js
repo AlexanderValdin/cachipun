@@ -5,44 +5,51 @@ for (let i=1; i<=jugadas; i++) {
   let pc = Math.floor(Math.random()*3+1)
 
   switch (usuario) {
+
     case 1:
-       if (pc!==1) {
-         if(pc==2){
-           alert('Como el computador escogió papel, has ganado');
-         }
-         else {
-           alert('Como el computador escogió piedra, has perdido');
-         }
-       }
-       else {
-         alert('Has escogido tijera como la computadora, es un empate');
-       }
-      break;
-      case 2:
-         if (pc!==2) {
-           if(pc==1){
-             alert('Como el computador escogió tijera, has perdido');
-           }
-           else {
-             alert('Como el computador escogió piedra, has ganado');
-           }
-         }
-         else {
-           alert('Has escogido papel como el computador, es un empate');
-         }
-        break;
+
+       switch (pc) {
+         case 1:
+              alert('la computadora también escogió tijera, es un empate');
+           break;
+        case 2:
+              alert('la computadora escogió papel, has ganado');
+            break;
         case 3:
-           if (pc!==3) {
-             if(pc==1){
-               alert('El computador ha elegido tijera, has ganado');
-             }
-             else {
-               alert('El computador ha elegido papel, has perdido');
-             }
-           }
-           else {
-             alert('Has elegido piedra al igual que el computador, es un empate');
-           }
+              alert('la computadora escogió piedra, has perdido');
+            break;
+
+       }
+
+      break;
+
+      case 2:
+
+      switch (pc) {
+        case 1:
+             alert('la computadora escogió tijera, has perdido');
+          break;
+       case 2:
+             alert('la computadora también escogió papel, es un empate');
+           break;
+       case 3:
+             alert('la computadora escogió piedra,has ganado');
+           break;
+      }
+        break;
+
+        case 3:
+        switch (pc) {
+          case 1:
+               alert('la computadora escogió tijera, has ganado');
+            break;
+         case 2:
+               alert('la computadora escogió papel, has perdido');
+             break;
+         case 3:
+               alert('la computadora  también escogió piedra, es un empate');
+             break;
+        }
           break;
     default:
 
